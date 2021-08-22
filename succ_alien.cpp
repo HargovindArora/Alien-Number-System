@@ -48,7 +48,7 @@ string convertNumToString(vector<int> &num, string b){
     return result;
 }
 
-void succ_alien(string n, string b){
+string succ_alien(string n, string b){
 
     int length = n.size()-1, base = b.size();
 
@@ -58,19 +58,41 @@ void succ_alien(string n, string b){
 
     string result = convertNumToString(num, b);
 
-    cout << result << endl;
+    return result;
+}
+
+void testCodeForMultipleInputs(){
+
+    string s1 = "!@^&*", s2 = "!@#^*&";
+    string b1 = "!@^&*", b2 = "!@#^&*";
+
+    string ans1 = "!@^*!", ans2 = "!@#^**";
+
+    bool test1, test2;
+    
+    test1 = ans1 == succ_alien(s1, b1);
+    test2 = ans2 == succ_alien(s2, b2);
+
+    cout << test1 << " " << test2 << endl;
 
     return;
 }
 
 int main(){
 
-    string s;
-    cin >> s;
+    string mode;
+    cout << "Please enter `test` to test the code, otherwise any character to use the code" << endl;
+    cin >> mode;
 
-    string b = "!@^&*";
+    if(mode=="test"){
+        testCodeForMultipleInputs();
+    }
+    else{
+        string s, b;
+        cin >> s >> b;
 
-    succ_alien(s, b);
+        cout << succ_alien(s, b) << endl;
+    }
 
     return 0;
 }
