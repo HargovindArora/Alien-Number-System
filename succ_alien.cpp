@@ -1,19 +1,24 @@
 #include<iostream>
 #include<vector>
+#include<map>
 
 using namespace std;
 
-vector<int> getNumFromString(string n, string b, int length, int base){
+void getMappingOfBaseChars(string b, int base, map<char, int> &strToInt){
+
+    for(int i=0; i<base; i++){
+        strToInt[b[i]] = i;
+    }
+
+    return;
+}
+
+vector<int> getNumFromString(string n, string b, map<char, int> &strToInt){
 
     vector<int> num;
 
     for(char c: n){
-        for(int j=0; j<base; j++){
-            if (c==b[j]){
-                num.emplace_back(j);
-                break;
-            }
-        }
+        num.emplace_back(strToInt[c]);
     }
 
     return num;
@@ -52,7 +57,11 @@ string succ_alien(string n, string b){
 
     int length = n.size()-1, base = b.size();
 
-    vector<int> num = getNumFromString(n, b, length, base);
+    map<char, int> strToInt;
+
+    getMappingOfBaseChars(b, base, strToInt);
+
+    vector<int> num = getNumFromString(n, b, strToInt);
 
     incrementBy1(num, length, base);
 
