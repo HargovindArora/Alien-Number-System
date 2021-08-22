@@ -4,6 +4,9 @@
 
 using namespace std;
 
+// A function to map the characters in the base string to
+// their corresponding int values and store it in a hashmap
+// to make operations efficient
 void getMappingOfBaseChars(string b, int base, map<char, int> &strToInt){
 
     for(int i=0; i<base; i++){
@@ -13,6 +16,9 @@ void getMappingOfBaseChars(string b, int base, map<char, int> &strToInt){
     return;
 }
 
+// A function to store the given number containing various chars
+// in an integer form in a vector, while maintaing the mapping of those chars
+// as mentioned in the base string
 vector<int> getNumFromString(string n, string b, map<char, int> &strToInt){
 
     vector<int> num;
@@ -24,6 +30,8 @@ vector<int> getNumFromString(string n, string b, map<char, int> &strToInt){
     return num;
 }
 
+// Function where we increase the given input number by 1
+// The number is stored in a vector/array
 void incrementBy1(vector<int> &num, int length, int base){
 
     int carry = 1;
@@ -42,6 +50,8 @@ void incrementBy1(vector<int> &num, int length, int base){
     return;
 }
 
+// Function to convert the resulting next number back to a 
+// string containing same characters and base as there were in the base string 
 string convertNumToString(vector<int> &num, string b){
 
     string result = "";
@@ -53,6 +63,8 @@ string convertNumToString(vector<int> &num, string b){
     return result;
 }
 
+// succ_alien function, that take a number and base system as its input
+// in string format and return the next number for n
 string succ_alien(string n, string b){
 
     int length = n.size()-1, base = b.size();
@@ -70,6 +82,7 @@ string succ_alien(string n, string b){
     return result;
 }
 
+// Function to test the code for multiple inputs
 void testCodeForMultipleInputs(){
 
     string s1 = "!@^&*", s2 = "!@#^*&", s3 = "******";
@@ -87,6 +100,7 @@ void testCodeForMultipleInputs(){
     return;
 }
 
+// Main Function, entry point of the program
 int main(){
 
     string mode;
