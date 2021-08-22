@@ -1,0 +1,64 @@
+commit 2cd7e07bbe8f8a51f9e78dd911a166d4237e7526
+Author: HargovindArora <hargovinds50@gmail.com>
+Date:   Mon Aug 23 00:20:00 2021 +0530
+
+    Added comments for every function, thus making code more understandable
+
+ succ_alien.cpp | 14 ++++++++++++++
+
+commit 80cf57ee0304a35289aec81b1276137aad2d2954
+Author: HargovindArora <hargovinds50@gmail.com>
+Date:   Mon Aug 23 00:10:34 2021 +0530
+
+    Added one more corner test case and tested the code
+
+ succ_alien.cpp | 10 +++++-----
+
+commit 508590a777c272b38f3b973ef528267c35c54e09
+Author: HargovindArora <hargovinds50@gmail.com>
+Date:   Mon Aug 23 00:02:39 2021 +0530
+
+    Used Hashmap to map the characters to corresponding numbers in the base string, thus reducing the time complexity of the  function
+
+ succ_alien.cpp | 25 +++++++++++++++++--------
+
+commit ebf9cd7b8d8525dfdbfc23836c027a9ec448711f
+Author: HargovindArora <hargovinds50@gmail.com>
+Date:   Sun Aug 22 23:51:53 2021 +0530
+
+    Changes the return type pf  function from void to string, also now, removed hard-coding of base system values, thus user can input any base as a string they want. Finally added a  mode for multiple testcases or run the function instead
+
+ succ_alien.cpp | 34 ++++++++++++++++++++++++++++------
+
+commit 8df6c103e908ecded7a499502691d18cc825a6e1
+Author: HargovindArora <hargovinds50@gmail.com>
+Date:   Sun Aug 22 22:37:42 2021 +0530
+
+    Tried to made the code more modular and the pieces of code more independent of each other wherever possible by breaking the big 'succ_alien' function into multiple, small independent functions with proper returning types
+
+ succ_alien.cpp        | 27 ++++++++++++++++++++++++---
+
+commit f69369d350eb98946ca26cf63eaea8274d212430
+Author: HargovindArora <hargovinds50@gmail.com>
+Date:   Sun Aug 22 22:25:27 2021 +0530
+
+    Optimized code by using break statement, storing lengths of string size in a variable and not calling function again, used new practice of using for each loop wherever possible and structured the code
+
+ succ_alien.cpp | 19 ++++++++++++-------
+
+commit f2898a89c7fd82829a367e28854c20f84f46cbf5
+Author: HargovindArora <hargovinds50@gmail.com>
+Date:   Sun Aug 22 22:05:45 2021 +0530
+
+    Naive implementation of the successor function. A lot of things can be optimized, code can be breaken down into chunks of independent code pieces, more meaningful variables, and proper programming practices
+
+ succ_alien.cpp | 50 ++++++++++++++++++++++++++++++++++++++++++++++++++
+
+commit c3e698622697ffdb274438ce296198cb41dd5f78
+Author: Hargovind Singh Arora <hargovinds50@gmail.com>
+Date:   Sun Aug 22 10:30:21 2021 +0530
+
+    Initial commit
+
+ .gitignore | 32 ++++++++++++++++++++++++++++++++
+ README.md  |  2 ++
