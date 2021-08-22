@@ -5,20 +5,23 @@ using namespace std;
 
 void succ_alien(string n, string b){
 
-    int length = n.size()-1;
+    int length = n.size()-1, base = b.size();
+
     vector<int> num;
-    for(int i=0; i<=length; i++){
-        char c = n[i];
-        for(int j=0; j<b.size(); j++){
+
+    for(char c: n){
+        for(int j=0; j<base; j++){
             if (c==b[j]){
                 num.emplace_back(j);
+                break;
             }
         }
     }
+
     int carry = 1;
 
     for(int i=length; i>=0; i--){
-        if((carry+num[i])%b.size()==0){
+        if((carry+num[i])%base==0){
             num[i]=0;
         }
         else{
@@ -30,11 +33,13 @@ void succ_alien(string n, string b){
 
     string result = "";
 
-    for(int i=0; i<=length; i++){
-        result += b[num[i]];
+    for(int n: num){
+        result += b[n];
     }
 
     cout << result << endl;
+
+    return;
 }
 
 int main(){
