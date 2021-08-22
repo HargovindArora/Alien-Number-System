@@ -72,17 +72,17 @@ string succ_alien(string n, string b){
 
 void testCodeForMultipleInputs(){
 
-    string s1 = "!@^&*", s2 = "!@#^*&";
+    string s1 = "!@^&*", s2 = "!@#^*&", s3 = "******";
     string b1 = "!@^&*", b2 = "!@#^&*";
+    string ans1 = "!@^*!", ans2 = "!@#^**", ans3 = "!!!!!!";
 
-    string ans1 = "!@^*!", ans2 = "!@#^**";
-
-    bool test1, test2;
+    bool test1, test2, test3;
     
     test1 = ans1 == succ_alien(s1, b1);
     test2 = ans2 == succ_alien(s2, b2);
+    test3 = ans3 == succ_alien(s3, b2);
 
-    cout << test1 << " " << test2 << endl;
+    cout << test1 << " " << test2 << " " << test3 << endl;
 
     return;
 }
